@@ -4,65 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".DivisoesActivity">
 
     <Button
-        android:id="@+id/BotaoClassificacao"
+        android:id="@+id/Botao1Div"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Classificação"
+        android:text="1 Divisão"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.18" />
+        app:layout_constraintVertical_bias="0.137" />
 
     <Button
-        android:id="@+id/BotaoResultados"
+        android:id="@+id/Botao2DivN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Resultados"
+        android:text="2 Divisão Norte"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.344" />
+        app:layout_constraintVertical_bias="0.25" />
 
     <Button
-        android:id="@+id/BotaoPavilhoes"
+        android:id="@+id/Botao2DivC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pavilhões"
+        android:text="2 Divisão Centro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.528" />
+        app:layout_constraintVertical_bias="0.366" />
 
     <Button
-        android:id="@+id/BotaoLogin"
+        android:id="@+id/Botao2DivS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="2 Divisao Sul"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.256"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.714" />
+        app:layout_constraintVertical_bias="0.478" />
 
     <Button
-        android:id="@+id/BotaoRegisto"
+        android:id="@+id/Botao3DivN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Registo"
+        android:text="3 Divisão Norte"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.739"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.714" />
+        app:layout_constraintVertical_bias="0.592" />
+
+    <Button
+        android:id="@+id/Botao3DivC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 Divisão Centro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71" />
+
+    <Button
+        android:id="@+id/Botao3DivS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 Divisão Sul"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.827" />
 </androidx.constraintlayout.widget.ConstraintLayout>
