@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity() {
             executarOutraActivity(LoginActivity::class.java, "aChave", arrayListOf())
         }
         BotaoRegisto = findViewById(R.id.BotaoRegisto)
+        BotaoRegisto.setOnClickListener {
+            executarOutraActivity(RegistoActivity::class.java, "aChave", arrayListOf())
+        }
 
     }
     private fun executarOutraActivity(outraActivity: Class<*>, chave: String, argsParaOutraActivity: ArrayList<String>) {

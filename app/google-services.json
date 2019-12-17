@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "33661591874",
+    "firebase_url": "https://hoqueiapp-63ea9.firebaseio.com",
+    "project_id": "hoqueiapp-63ea9",
+    "storage_bucket": "hoqueiapp-63ea9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33661591874:android:75190f66eb03338d81e8db",
+        "android_client_info": {
+          "package_name": "com.example.hoqueiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33661591874-qmpii5vk9ei3bn3sim8t9cb9uhnst7vr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hoqueiapp",
+            "certificate_hash": "c2b72063402d58c9bc55e8dcc68240a7c08232b0"
+          }
+        },
+        {
+          "client_id": "33661591874-9ig6262qpgufe9t1sd1mn12etouvbp7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqqhmV2jPTJ_mWZcv2Mu2U9piVV5yDHKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33661591874-9ig6262qpgufe9t1sd1mn12etouvbp7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
