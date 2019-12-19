@@ -21,21 +21,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         BotaoClassificacao = findViewById(R.id.BotaoClassificacao)
+        BotaoClassificacao.setOnClickListener{
+            executarOutraActivity(Class1DivActivity::class.java)
+        }
         BotaoResultados = findViewById(R.id.BotaoResultados)
+        BotaoResultados.setOnClickListener{
+            executarOutraActivity(DivisoesActivity::class.java)
+        }
         BotaoPavilhoes = findViewById(R.id.BotaoPavilhoes)
+        BotaoPavilhoes.setOnClickListener{
+            executarOutraActivity(PavilhoesActivity::class.java)
+        }
         BotaoLogin = findViewById(R.id.BotaoLogin)
         BotaoLogin.setOnClickListener{
-            executarOutraActivity(LoginActivity::class.java, "aChave", arrayListOf())
+            executarOutraActivity(LoginActivity::class.java)
         }
         BotaoRegisto = findViewById(R.id.BotaoRegisto)
         BotaoRegisto.setOnClickListener {
-            executarOutraActivity(RegistoActivity::class.java, "aChave", arrayListOf())
+            executarOutraActivity(RegistoActivity::class.java)
         }
 
     }
-    private fun executarOutraActivity(outraActivity: Class<*>, chave: String, argsParaOutraActivity: ArrayList<String>) {
+    private fun executarOutraActivity(outraActivity: Class<*>) {
         val x = Intent(this, outraActivity)
-        x.putStringArrayListExtra(chave, argsParaOutraActivity)
         startActivity(x)
     }
 }

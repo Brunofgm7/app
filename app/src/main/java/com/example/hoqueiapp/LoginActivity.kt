@@ -54,13 +54,11 @@ class LoginActivity : AppCompatActivity() {
             mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener{ task ->
                 if (task.isSuccessful) {
                     startActivity(Intent(this, LoginOnMainActivity::class.java))
-                    Toast.makeText(this, "Login com sucesso", Toast.LENGTH_SHORT).show()
                     executarOutraActivity(LoginOnMainActivity::class.java)
                 } else {
                     Toast.makeText(this, "Login sem sucesso ", Toast.LENGTH_SHORT).show()
                 }
             }
-
         } else {
             Toast.makeText(this, "Por favor preencha os campos!", Toast.LENGTH_SHORT).show()
         }
