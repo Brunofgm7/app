@@ -23,11 +23,15 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         gv = getApplication() as VariaveisGlobais
         setContentView(R.layout.activity_login)
-
+        textEmailLogin = findViewById(R.id.textEmailLogin)
+        textPassLogin = findViewById(R.id.textPassLogin)
         BotaoLogin = findViewById(R.id.BotaoLogin)
-        BotaoLogin.setOnClickListener(View.OnClickListener {
-            view -> login()
-        })
+        BotaoLogin.setOnClickListener {
+            var email: String = textEmailLogin.text.toString()
+            var pass: String = textPassLogin.text.toString()
+
+            login(email, pass)
+        }
         BotaoBack = findViewById(R.id.BotaoBack)
         BotaoBack.setOnClickListener {
             executarOutraActivity(MainActivity::class.java)
@@ -43,17 +47,15 @@ class LoginActivity : AppCompatActivity() {
         startActivity(x)
     }
 
-    private fun login () {
-        textEmailLogin = findViewById(R.id.textEmailLogin)
-        var email: String = textEmailLogin.text.toString()
-        textPassLogin = findViewById(R.id.textPassLogin)
-        var pass: String = textPassLogin.text.toString()
+    private fun login (email: String, pass: String) {
+
 
         if (!email.isEmpty() && !pass.isEmpty()) {
             mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener{ task ->
                 if (task.isSuccessful) {
                     startActivity(Intent(this, LoginOnMainActivity::class.java))
                     Toast.makeText(this, "Login com sucesso", Toast.LENGTH_SHORT).show()
+                    executarOutraActivity(LoginOnMainActivity::class.java)
                 } else {
                     Toast.makeText(this, "Login sem sucesso ", Toast.LENGTH_SHORT).show()
                 }

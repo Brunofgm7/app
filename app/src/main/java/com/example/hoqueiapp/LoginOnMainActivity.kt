@@ -1,8 +1,10 @@
 package com.example.hoqueiapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginOnMainActivity : AppCompatActivity() {
     lateinit var BotaoClassificacao: Button
@@ -10,6 +12,7 @@ class LoginOnMainActivity : AppCompatActivity() {
     lateinit var BotaoPavilhoes: Button
     lateinit var BotaoDefConta: Button
     lateinit var BotaoLogout: Button
+    val mAuth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +22,18 @@ class LoginOnMainActivity : AppCompatActivity() {
         BotaoPavilhoes= findViewById(R.id.BotaoPavilhoes)
         BotaoDefConta = findViewById(R.id.BotaoDefConta)
         BotaoLogout = findViewById(R.id.BotaoLogout)
+        BotaoLogout.setOnClickListener {
+            logout()
+            executarOutraActivity(MainActivity::class.java)
+        }
     }
 
+    private fun logout ()  {
+        mAuth.signOut()
+    }
+
+    private fun executarOutraActivity(outraActivity: Class<*>) {
+        val x = Intent(this, outraActivity)
+        startActivity(x)
+    }
 }
