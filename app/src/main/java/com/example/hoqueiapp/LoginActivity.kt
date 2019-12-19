@@ -50,14 +50,14 @@ class LoginActivity : AppCompatActivity() {
         var pass: String = textPassLogin.text.toString()
 
         if (!email.isEmpty() && !pass.isEmpty()) {
-            mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(this, OnCompleteListener { task ->
+            mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener{ task ->
                 if (task.isSuccessful) {
                     startActivity(Intent(this, LoginOnMainActivity::class.java))
                     Toast.makeText(this, "Login com sucesso", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(this, "Login sem sucesso ", Toast.LENGTH_SHORT).show()
                 }
-            })
+            }
 
         } else {
             Toast.makeText(this, "Por favor preencha os campos!", Toast.LENGTH_SHORT).show()

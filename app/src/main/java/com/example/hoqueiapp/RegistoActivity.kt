@@ -8,6 +8,8 @@ import android.widget.EditText
 import android.widget.Toast
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import java.lang.Exception
 
 class RegistoActivity : AppCompatActivity() {
     lateinit var BotaoRegisto: Button
@@ -17,6 +19,7 @@ class RegistoActivity : AppCompatActivity() {
     lateinit var textPassRegisto: EditText
     lateinit var gv: VariaveisGlobais
     val mAuth = FirebaseAuth.getInstance()
+    val Auth = FirebaseFirestore.getInstance().collection("Users")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,13 +50,23 @@ class RegistoActivity : AppCompatActivity() {
         var pass = textPassRegisto.text.toString()
 
         if (!user.isEmpty() && !email.isEmpty() && !pass.isEmpty()) {
-            mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(this, OnCompleteListener { task ->
+            mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
+                    val items = HashMap<String, Any>()
+                    items.put("Name", user)
+                    items.put("Email", email)
+                    items.put("Pass", pass)
+
+                    Auth.document(user).set(items).addOnSuccessListener { void: Void? ->
+                        Toast.makeText(this, "Registo COM sucesso", Toast.LENGTH_SHORT).show()
+                    }.addOnFailureListener {exception: Exception ->
+                        Toast.makeText(this, exception.toString(), Toast.LENGTH_SHORT).show()
+                    }
 
                 } else {
                     Toast.makeText(this, "Registo sem sucesso", Toast.LENGTH_SHORT).show()
                 }
-            })
+            }
         } else {
             Toast.makeText(this, "Por favor preencha os campos!", Toast.LENGTH_SHORT).show()
 
