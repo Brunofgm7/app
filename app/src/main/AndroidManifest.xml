@@ -10,7 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginOnMainActivity"></activity>
+        <activity android:name=".MudarPassActivity"></activity>
+        <activity android:name=".MudarEmailActivity" />
+        <activity android:name=".DefContaActivity" />
+        <activity android:name=".LoginOnMainActivity" />
         <activity android:name=".RegistoActivity" />
         <activity android:name=".VariaveisGlobais" />
         <activity android:name=".LoginActivity" />

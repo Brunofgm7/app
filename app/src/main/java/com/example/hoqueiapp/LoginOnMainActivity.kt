@@ -21,6 +21,9 @@ class LoginOnMainActivity : AppCompatActivity() {
         BotaoResultados = findViewById(R.id.BotaoResultados)
         BotaoPavilhoes= findViewById(R.id.BotaoPavilhoes)
         BotaoDefConta = findViewById(R.id.BotaoDefConta)
+        BotaoDefConta.setOnClickListener {
+            executarOutraActivity(DefContaActivity::class.java)
+        }
         BotaoLogout = findViewById(R.id.BotaoLogout)
         BotaoLogout.setOnClickListener {
             logout()
