@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DivisoesActivity">
+    tools:context=".DivisoesActivity"
+    android:background="@drawable/imagem15">
 
     <Button
         android:id="@+id/Botao1Div"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="91dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_button_white"
         android:text="1 Divisão"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,8 +21,9 @@
 
     <Button
         android:id="@+id/Botao2DivN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_button_white"
         android:text="2 Divisão Norte"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,8 +34,9 @@
 
     <Button
         android:id="@+id/Botao2DivC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="136dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_button_white"
         android:text="2 Divisão Centro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,8 +46,9 @@
 
     <Button
         android:id="@+id/Botao2DivS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="106dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_button_white"
         android:text="2 Divisao Sul"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,8 +59,9 @@
 
     <Button
         android:id="@+id/Botao3DivN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_button_white"
         android:text="3 Divisão Norte"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,8 +72,9 @@
 
     <Button
         android:id="@+id/Botao3DivC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_button_white"
         android:text="3 Divisão Centro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,8 +84,9 @@
 
     <Button
         android:id="@+id/Botao3DivS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="103dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_button_white"
         android:text="3 Divisão Sul"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,11 +99,13 @@
         android:id="@+id/BotaoBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_white"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.909" />
+        app:layout_constraintVertical_bias="0.894" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

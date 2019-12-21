@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
     private fun executarOutraActivity(outraActivity: Class<*>) {
         val x = Intent(this, outraActivity)
         startActivity(x)

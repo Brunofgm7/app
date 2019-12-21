@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginOnMainActivity">
+    tools:context=".LoginOnMainActivity"
+    android:background="@drawable/imagem15">
 
     <Button
         android:id="@+id/BotaoClassificacao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="115dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_button_white"
         android:text="Classificação"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,8 +22,9 @@
 
     <Button
         android:id="@+id/BotaoResultados"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="102dp"
+        android:layout_height="43dp"
+        android:background="@drawable/rounded_button_white"
         android:text="Resultados"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,8 +35,9 @@
 
     <Button
         android:id="@+id/BotaoPavilhoes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_button_white"
         android:text="Pavilhões"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,8 +48,9 @@
 
     <Button
         android:id="@+id/BotaoDefConta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="137dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_button_white"
         android:text="Definições Conta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,11 +64,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Logout"
-        android:background="@android:color/holo_red_light"
+        android:textColor="@android:color/white"
+        android:background="@drawable/rounded_button_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

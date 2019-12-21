@@ -3,11 +3,7 @@ package com.example.hoqueiapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.view.View
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -17,6 +13,7 @@ import java.lang.Exception
 class RegistoActivity : AppCompatActivity() {
     lateinit var BotaoRegisto: Button
     lateinit var BotaoBack: Button
+    lateinit var BotaoJaTenhoConta: Button
 
     lateinit var gv: VariaveisGlobais
     val mAuth = FirebaseAuth.getInstance()
@@ -34,6 +31,10 @@ class RegistoActivity : AppCompatActivity() {
         BotaoBack = findViewById(R.id.BotaoBack)
         BotaoBack.setOnClickListener {
             executarOutraActivity(MainActivity::class.java)
+        }
+        BotaoJaTenhoConta = findViewById(R.id.BotaoJaTenhoConta)
+        BotaoJaTenhoConta.setOnClickListener {
+            executarOutraActivity(LoginActivity::class.java)
         }
 
     }

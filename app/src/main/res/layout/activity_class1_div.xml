@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Class1DivActivity">
+    tools:context=".Class1DivActivity"
+    android:background="@drawable/imagem15">
 
     <TableLayout
         android:layout_width="296dp"
@@ -1007,6 +1008,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
+        android:background="@drawable/rounded_button_white"
         tools:layout_editor_absoluteX="281dp"
         tools:layout_editor_absoluteY="613dp" />
 
