@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MudarEmailActivity"
     android:background="@drawable/imagem15">
-
     <Button
         android:id="@+id/BotaoBack"
         android:layout_width="wrap_content"

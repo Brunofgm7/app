@@ -8,26 +8,15 @@
     android:background="@drawable/imagem15">
 
     <TableLayout
-        android:layout_width="296dp"
-        android:layout_height="323dp"
+        android:id="@+id/tableLayout"
+        android:layout_width="298dp"
+        android:layout_height="309dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/TextClass"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Classificação" />
-
-        </TableRow>
+        app:layout_constraintVertical_bias="0.353">
 
         <TableRow
             android:layout_width="match_parent"
@@ -1007,9 +996,39 @@
         android:id="@+id/BotaoBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"
         android:background="@drawable/rounded_button_white"
-        tools:layout_editor_absoluteX="281dp"
-        tools:layout_editor_absoluteY="613dp" />
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909" />
+
+    <TextView
+        android:id="@+id/textViewClassificacao"
+        android:layout_width="187dp"
+        android:layout_height="44dp"
+        android:text="Classificação"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <TextView
+        android:id="@+id/textView1Div"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 Divisão Nacional"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

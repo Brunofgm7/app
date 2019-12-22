@@ -1,5 +1,6 @@
 package com.example.hoqueiapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -20,6 +21,9 @@ class DivisoesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_divisoes)
         gv = getApplication() as VariaveisGlobais
         Botao1Div = findViewById(R.id.Botao1Div)
+        Botao1Div.setOnClickListener {
+            executarOutraActivity(ChatActivity::class.java)
+        }
         Botao2DivN = findViewById(R.id.Botao2DivN)
         Botao2DivC = findViewById(R.id.Botao2DivC)
         Botao2DivS = findViewById(R.id.Botao2DivS)
@@ -27,5 +31,10 @@ class DivisoesActivity : AppCompatActivity() {
         Botao3DivC = findViewById(R.id.Botao3DivC)
         Botao3DivS = findViewById(R.id.Botao3DivS)
         BotaoBack = findViewById(R.id.BotaoBack)
+    }
+
+    private fun executarOutraActivity(outraActivity: Class<*>) {
+        val x = Intent(this, outraActivity)
+        startActivity(x)
     }
 }

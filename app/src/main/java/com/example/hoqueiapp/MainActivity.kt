@@ -4,7 +4,9 @@ import android.app.Application
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 
 class VariaveisGlobais : Application() {
     // meter aqui as variaveis globais
