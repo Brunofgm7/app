@@ -35,7 +35,7 @@ class ChatActivity : AppCompatActivity() {
         }
 
     private fun EnviarMensagem() {
-        // como é que enviar
+        // como é que envia mensagem para db
     }
 
     private fun ChatConversas() {

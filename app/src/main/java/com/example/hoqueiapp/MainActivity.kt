@@ -8,10 +8,6 @@ import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 
-class VariaveisGlobais : Application() {
-    // meter aqui as variaveis globais
-}
-
 class MainActivity : AppCompatActivity() {
     lateinit var BotaoClassificacao: Button
     lateinit var BotaoResultados: Button

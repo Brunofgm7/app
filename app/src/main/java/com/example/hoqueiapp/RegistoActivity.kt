@@ -15,13 +15,11 @@ class RegistoActivity : AppCompatActivity() {
     lateinit var BotaoBack: Button
     lateinit var BotaoJaTenhoConta: Button
 
-    lateinit var gv: VariaveisGlobais
     val mAuth = FirebaseAuth.getInstance()
     val Auth = FirebaseFirestore.getInstance().collection("Users")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        gv = getApplication() as VariaveisGlobais
         setContentView(R.layout.activity_registo)
 
         BotaoRegisto = findViewById(R.id.BotaoRegisto)

@@ -3,30 +3,31 @@
     package="com.example.hoqueiapp">
 
     <application
-        android:name=".VariaveisGlobais"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChatActivity"></activity>
-        <activity android:name=".MudarPassActivity" />
-        <activity android:name=".MudarEmailActivity" />
-        <activity android:name=".DefContaActivity" />
-        <activity android:name=".LoginOnMainActivity" />
-        <activity android:name=".RegistoActivity" />
-        <activity android:name=".VariaveisGlobais" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".Class1DivActivity" />
-        <activity android:name=".PavilhoesActivity" />
-        <activity android:name=".DivisoesActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".VerificarLoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".MudarPassActivity" />
+        <activity android:name=".MudarEmailActivity" />
+        <activity android:name=".DefContaActivity" />
+        <activity android:name=".LoginOnMainActivity" />
+        <activity android:name=".RegistoActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".Class1DivActivity" />
+        <activity android:name=".PavilhoesActivity" />
+        <activity android:name=".DivisoesActivity" />
+        <activity android:name=".MainActivity">
         </activity>
     </application>
 

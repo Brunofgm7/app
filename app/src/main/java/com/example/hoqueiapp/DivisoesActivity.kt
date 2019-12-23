@@ -14,12 +14,10 @@ class DivisoesActivity : AppCompatActivity() {
     lateinit var Botao3DivC: Button
     lateinit var Botao3DivS: Button
     lateinit var BotaoBack: Button
-    lateinit var gv: VariaveisGlobais
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_divisoes)
-        gv = getApplication() as VariaveisGlobais
         Botao1Div = findViewById(R.id.Botao1Div)
         Botao1Div.setOnClickListener {
             executarOutraActivity(ChatActivity::class.java)
