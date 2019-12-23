@@ -31,13 +31,6 @@ class LoginActivity : AppCompatActivity() {
     lateinit var textPassLogin: EditText
     val mAuth = FirebaseAuth.getInstance()
 
-    private val signInProviders =
-        listOf(AuthUI.IdpConfig.EmailBuilder()
-            .setAllowNewAccounts(true)
-            .setRequireName(true)
-            .build())
-
-    private val RC_SIGN_IN = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,37 +56,12 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (requestCode == RC_SIGN_IN) {
-            val response = IdpResponse.fromResultIntent(data)
-
-            if (resultCode == Activity.RESULT_OK) {
-                val progressDialog = indeterminateProgressDialog("Setting up your account")
-                startActivity(intentFor<LoginOnMainActivity>().newTask().clearTask())
-                progressDialog.dismiss()
-            }
-            else if (resultCode == Activity.RESULT_CANCELED) {
-                if (response == null) return
-
-                when (response.error?.errorCode) {
-                    ErrorCodes.NO_NETWORK ->
-                        Snackbar.make(constraint_layout, "Sem ligação à rede", Snackbar.LENGTH_LONG).show()
-                    ErrorCodes.UNKNOWN_ERROR ->
-                        Snackbar.make(constraint_layout, "Erro desconhecido", Snackbar.LENGTH_LONG).show()
-                }
-            }
-        }
-    }
-
     private fun executarOutraActivity(outraActivity: Class<*>) {
         val x = Intent(this, outraActivity)
         startActivity(x)
     }
 
     private fun login (email: String, pass: String) {
-
 
         if (!email.isEmpty() && !pass.isEmpty()) {
             mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener{ task ->
