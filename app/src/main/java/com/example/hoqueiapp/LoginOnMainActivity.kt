@@ -19,6 +19,9 @@ class LoginOnMainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login_on_main)
         BotaoClassificacao = findViewById(R.id.BotaoClassificacao)
         BotaoResultados = findViewById(R.id.BotaoResultados)
+        BotaoResultados.setOnClickListener {
+            executarOutraActivity(DivisoesActivity::class.java)
+        }
         BotaoPavilhoes= findViewById(R.id.BotaoPavilhoes)
         BotaoDefConta = findViewById(R.id.BotaoDefConta)
         BotaoDefConta.setOnClickListener {
