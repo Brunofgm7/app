@@ -43,13 +43,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        BotaoSignIn.setOnClickListener {
-            val intent = AuthUI.getInstance().createSignInIntentBuilder()
-                .setAvailableProviders(signInProviders)
-                .build()
-            startActivityForResult(intent, RC_SIGN_IN)
-        }
-
         textEmailLogin = findViewById(R.id.textEmailLogin)
         textPassLogin = findViewById(R.id.textPassLogin)
         BotaoLogin = findViewById(R.id.BotaoLogin)
@@ -57,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
             var email: String = textEmailLogin.text.toString()
             var pass: String = textPassLogin.text.toString()
 
-            //login(email, pass)
+            login(email, pass)
         }
         BotaoBack = findViewById(R.id.BotaoBack)
         BotaoBack.setOnClickListener {
@@ -99,10 +92,7 @@ class LoginActivity : AppCompatActivity() {
         startActivity(x)
     }
 
-
-
-
- /*   private fun login (email: String, pass: String) {
+    private fun login (email: String, pass: String) {
 
 
         if (!email.isEmpty() && !pass.isEmpty()) {
@@ -117,5 +107,5 @@ class LoginActivity : AppCompatActivity() {
         } else {
             Toast.makeText(this, "Por favor preencha os campos!", Toast.LENGTH_SHORT).show()
         }
-    }*/
+    }
 }
