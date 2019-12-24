@@ -13,7 +13,6 @@ class MudarEmailActivity : AppCompatActivity() {
     lateinit var textNovoEmail: EditText
     lateinit var BotaoGuardar: Button
     lateinit var BotaoBack: Button
-    val mAuth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
