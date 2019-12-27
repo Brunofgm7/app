@@ -27,7 +27,6 @@ import kotlinx.android.synthetic.main.activity_def_conta.*
 
 class DefContaActivity : AppCompatActivity() {
 
-    lateinit var viewNome: TextView
     lateinit var viewEmail: TextView
     lateinit var BotaoEditarEmail: Button
     lateinit var BotaoMudarPass: Button
@@ -37,7 +36,6 @@ class DefContaActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_def_conta)
-
 
 
         BotaoEditarEmail = findViewById(R.id.BotaoEditarEmail)
@@ -50,12 +48,12 @@ class DefContaActivity : AppCompatActivity() {
         }
         BotaoBack = findViewById(R.id.BotaoBack)
         BotaoBack.setOnClickListener {
-            getdata()
-            //executarOutraActivity(LoginOnMainActivity::class.java)
+            executarOutraActivity(LoginOnMainActivity::class.java)
         }
 
-        viewNome = findViewById(R.id.viewNome)
         viewEmail = findViewById(R.id.viewEmail)
+
+        getdata()
 
     }
 
@@ -65,41 +63,13 @@ class DefContaActivity : AppCompatActivity() {
     }
 
     private fun getdata() {
-        val user = FirebaseAuth.getInstance().currentUser?.
-        val usertxt = user.toString()
-        Toast.makeText(this,"$usertxt", Toast.LENGTH_LONG).show()
-        val Auth = FirebaseFirestore.getInstance().collection("Users").document("$usertxt").get().addOnSuccessListener(
-            OnSuccessListener<DocumentSnapshot> {documentSnapshot ->
-                var nome = ""
-                var email = ""
-                if(documentSnapshot.exists()) {
-                    nome = documentSnapshot.getString("Name")!!
-                    Toast.makeText(this,"$nome", Toast.LENGTH_LONG).show()
-                    email = documentSnapshot.getString("Email")!!
-                    Toast.makeText(this,"$email", Toast.LENGTH_LONG).show()
-                } else {
-                    Toast.makeText(this,"Document does not exist", Toast.LENGTH_LONG).show()
-                }
-            }).addOnFailureListener(OnFailureListener { e ->
-            val error = e.message
-            Toast.makeText(this,"ERRO!!!!!!!! $error", Toast.LENGTH_LONG).show()
-        })
-
-
-        /*val user = FirebaseAuth.getInstance().currentUser
-        val eee = ""
+        val user = FirebaseAuth.getInstance().currentUser
         val Auth = FirebaseFirestore.getInstance().collection("Users")
-            .whereEqualTo("Name", eee )
             .get()
             .addOnCompleteListener { task ->
                 if(task.isSuccessful){
-                    viewNome.text = eee
-                    Toast.makeText(this, "$eee", Toast.LENGTH_LONG).show()
+                    viewEmail.text = user!!.email
                 }
             }
-        if (user != null) {
-            viewEmail.text = user.email
-        } */
-
     }
 }

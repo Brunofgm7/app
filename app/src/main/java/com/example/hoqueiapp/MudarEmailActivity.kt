@@ -5,11 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_mudar_email.*
 
 class MudarEmailActivity : AppCompatActivity() {
+
+    lateinit var viewEmailAtual: TextView
     lateinit var textNovoEmail: EditText
     lateinit var BotaoGuardar: Button
     lateinit var BotaoBack: Button
@@ -18,7 +22,7 @@ class MudarEmailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mudar_email)
 
-        viewEmailAtual
+        viewEmailAtual = findViewById(R.id.viewEmailAtual)
         textNovoEmail = findViewById(R.id.textNovoEmail)
         BotaoGuardar = findViewById(R.id.BotaoGuardar)
         BotaoGuardar.setOnClickListener {
@@ -28,6 +32,8 @@ class MudarEmailActivity : AppCompatActivity() {
         BotaoBack.setOnClickListener {
              executarOutraActivity(DefContaActivity::class.java)
         }
+
+        getdata()
 
     }
 
@@ -39,6 +45,7 @@ class MudarEmailActivity : AppCompatActivity() {
     private fun editarEmail(){
 
         val user = FirebaseAuth.getInstance().currentUser
+        //val user = FirebaseFirestore.getInstance().collection("Users").document()
         var novoEmail = textNovoEmail.text.toString()
 
         if (!novoEmail.isEmpty()) {
@@ -51,6 +58,17 @@ class MudarEmailActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    private fun getdata() {
+        val user = FirebaseAuth.getInstance().currentUser
+        val Auth = FirebaseFirestore.getInstance().collection("Users")
+            .get()
+            .addOnCompleteListener { task ->
+                if(task.isSuccessful){
+                    viewEmailAtual.text = user!!.email
+                }
+            }
     }
 
 }

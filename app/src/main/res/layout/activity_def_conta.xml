@@ -34,20 +34,6 @@
         app:layout_constraintVertical_bias="0.445" />
 
     <TextView
-        android:id="@+id/view"
-        android:layout_width="57dp"
-        android:layout_height="33dp"
-        android:text="Nome:"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.338" />
-
-    <TextView
         android:id="@+id/view2"
         android:layout_width="61dp"
         android:layout_height="34dp"
@@ -60,17 +46,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.447" />
-
-    <TextView
-        android:id="@+id/viewNome"
-        android:layout_width="198dp"
-        android:layout_height="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.337" />
 
     <TextView
         android:id="@+id/viewEmail"
