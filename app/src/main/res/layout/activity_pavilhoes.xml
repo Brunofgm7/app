@@ -8,17 +8,6 @@
     android:background="@drawable/imagem15">
 
     <Button
-        android:id="@+id/BotaoPavHCM"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HC Marco"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.084" />
-
-    <Button
         android:id="@+id/BotaoBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,5 +19,114 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.874" />
+
+    <ScrollView
+        android:layout_width="411dp"
+        android:layout_height="588dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/BotaoPavHCM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HC Marco" />
+
+            <Button
+                android:id="@+id/BotaoPavFCP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FC Porto" />
+
+            <Button
+                android:id="@+id/BotaoPavOCB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OC Barcelos" />
+
+            <Button
+                android:id="@+id/BotaoPavUDO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UD Oliveirense" />
+
+            <Button
+                android:id="@+id/BotaoPavSCP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sporting CP" />
+
+            <Button
+                android:id="@+id/BotaoPavSLB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SL Benfica" />
+
+            <Button
+                android:id="@+id/BotaoPavHCT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HC Turquel" />
+
+            <Button
+                android:id="@+id/BotaoPavRAHC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Riba d'Ave HC" />
+
+            <Button
+                android:id="@+id/BotaoPavADV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AD Valongo" />
+
+            <Button
+                android:id="@+id/BotaoPavHCB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HC Braga" />
+
+            <Button
+                android:id="@+id/BotaoPavADS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AD Sanjoanense" />
+
+            <Button
+                android:id="@+id/BotaoPavAJV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A Juventude Viana" />
+
+            <Button
+                android:id="@+id/BotaoPavCDPA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CD Paço de Arcos" />
+
+            <Button
+                android:id="@+id/BotaoPavHCOT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HC OS Tigres" />
+
+            <Button
+                android:id="@+id/BotaoPavAEFD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AE Física D" />
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

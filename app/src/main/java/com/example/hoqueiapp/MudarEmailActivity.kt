@@ -45,8 +45,9 @@ class MudarEmailActivity : AppCompatActivity() {
     private fun editarEmail(){
 
         val user = FirebaseAuth.getInstance().currentUser
-        //val user = FirebaseFirestore.getInstance().collection("Users").document()
+        val user2 = FirebaseFirestore.getInstance().collection("Users")
         var novoEmail = textNovoEmail.text.toString()
+
 
         if (!novoEmail.isEmpty()) {
             user!!.updateEmail(novoEmail).addOnCompleteListener { task2 ->
@@ -57,7 +58,6 @@ class MudarEmailActivity : AppCompatActivity() {
                 }
             }
         }
-
     }
 
     private fun getdata() {
