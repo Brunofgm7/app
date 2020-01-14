@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         BotaoClassificacao = findViewById(R.id.BotaoClassificacao)
         BotaoClassificacao.setOnClickListener{
-            executarOutraActivity(Class1DivActivity::class.java)
+            executarOutraActivity(DivisoesActivity::class.java)
         }
         BotaoResultados = findViewById(R.id.BotaoResultados)
         BotaoResultados.setOnClickListener{

@@ -53,10 +53,9 @@ class RegistoActivity : AppCompatActivity() {
 
                     Toast.makeText(this, "Registo COM sucesso", Toast.LENGTH_SHORT).show()
 
-                    createUser(nome, email, pass)
+                    createUser(nome, email)
 
                     executarOutraActivity(LoginActivity::class.java)
-
 
                 } else {
                     Toast.makeText(this, "Registo sem sucesso", Toast.LENGTH_SHORT).show()
@@ -82,12 +81,10 @@ class RegistoActivity : AppCompatActivity() {
         }
     }
 
-    private fun createUser(nome: String, email: String, pass: String) {
+    private fun createUser(nome: String, email: String) {
         val user = User()
         user.nome = nome
         user.email = email
-        user.pass = pass
-
         InsertUser(user)
     }
 }

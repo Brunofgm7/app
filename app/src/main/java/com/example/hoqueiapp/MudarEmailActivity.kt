@@ -45,14 +45,15 @@ class MudarEmailActivity : AppCompatActivity() {
     private fun editarEmail(){
 
         val user = FirebaseAuth.getInstance().currentUser
-        val user2 = FirebaseFirestore.getInstance().collection("Users")
-        var novoEmail = textNovoEmail.text.toString()
 
+        var novoEmail = textNovoEmail.text.toString()
 
         if (!novoEmail.isEmpty()) {
             user!!.updateEmail(novoEmail).addOnCompleteListener { task2 ->
                 if (task2.isSuccessful) {
                     Toast.makeText(this, "SUCESSO! Email atualizado!", Toast.LENGTH_LONG).show()
+                    executarOutraActivity(DefContaActivity::class.java)
+                    finish()
                 } else {
                     Toast.makeText(this, "ERRO: Email não atualizado", Toast.LENGTH_LONG).show()
                 }

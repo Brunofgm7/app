@@ -66,8 +66,8 @@ class LoginActivity : AppCompatActivity() {
         if (!email.isEmpty() && !pass.isEmpty()) {
             mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener{ task ->
                 if (task.isSuccessful) {
-                    startActivity(Intent(this, LoginOnMainActivity::class.java))
                     executarOutraActivity(LoginOnMainActivity::class.java)
+                    finish()
                 } else {
                     Toast.makeText(this, "Login sem sucesso ", Toast.LENGTH_SHORT).show()
                 }

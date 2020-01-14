@@ -18,11 +18,17 @@ class LoginOnMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_on_main)
         BotaoClassificacao = findViewById(R.id.BotaoClassificacao)
+        BotaoClassificacao.setOnClickListener {
+            executarOutraActivity(Class1DivActivity::class.java)
+        }
         BotaoResultados = findViewById(R.id.BotaoResultados)
         BotaoResultados.setOnClickListener {
             executarOutraActivity(DivisoesActivity::class.java)
         }
         BotaoPavilhoes= findViewById(R.id.BotaoPavilhoes)
+        BotaoPavilhoes.setOnClickListener {
+            executarOutraActivity(PavilhoesActivity::class.java)
+        }
         BotaoDefConta = findViewById(R.id.BotaoDefConta)
         BotaoDefConta.setOnClickListener {
             executarOutraActivity(DefContaActivity::class.java)
