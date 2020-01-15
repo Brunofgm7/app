@@ -47,6 +47,8 @@ class MudarPassActivity : AppCompatActivity() {
                 user!!.updatePassword(novaPass).addOnCompleteListener { task3 ->
                     if (task3.isSuccessful) {
                         Toast.makeText(this, "SUCESSO! Pass atualizada!", Toast.LENGTH_LONG).show()
+                        executarOutraActivity(DefContaActivity::class.java)
+                        finish()
                     } else {
                         Toast.makeText(this, "ERRO: Pass não atualizada", Toast.LENGTH_LONG).show()
                     }

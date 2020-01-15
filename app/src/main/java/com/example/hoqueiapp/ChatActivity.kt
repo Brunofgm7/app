@@ -1,8 +1,8 @@
 package com.example.hoqueiapp
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -16,7 +16,7 @@ import com.xwray.groupie.Item
 import kotlinx.android.synthetic.main.activity_chat.*
 import kotlinx.android.synthetic.main.chat_from_row.view.*
 import kotlinx.android.synthetic.main.chat_to_row.view.*
-import org.jetbrains.anko.backgroundColor
+
 
 class ChatActivity : AppCompatActivity() {
 
@@ -42,10 +42,7 @@ class ChatActivity : AppCompatActivity() {
             Log.d(TAG, "Tentativa de envio de mensagem")
             EnviarMensagem()
         }
-
-
     }
-
 
     private fun listenForMessages() {
         val ref = FirebaseDatabase.getInstance().getReference("/mensagens")
@@ -62,10 +59,8 @@ class ChatActivity : AppCompatActivity() {
                         adapter.add(ChatToItem(chatMessage.text))
                     } else {
                         adapter.add(ChatFromItem(chatMessage.text))
-
                     }
                 }
-
             }
 
             override fun onCancelled(p0: DatabaseError) {
@@ -108,8 +103,6 @@ class ChatActivity : AppCompatActivity() {
                 InserirMensagem.text.clear()
                 recyclerviewChat.scrollToPosition(adapter.itemCount - 1)
             }
-
-
     }
 
 
@@ -132,7 +125,5 @@ class ChatActivity : AppCompatActivity() {
         override fun getLayout(): Int {
             return R.layout.chat_to_row
         }
-
-
     }
 }

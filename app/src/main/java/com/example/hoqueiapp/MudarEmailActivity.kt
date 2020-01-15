@@ -18,6 +18,7 @@ class MudarEmailActivity : AppCompatActivity() {
     lateinit var BotaoGuardar: Button
     lateinit var BotaoBack: Button
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mudar_email)
@@ -30,7 +31,7 @@ class MudarEmailActivity : AppCompatActivity() {
         }
         BotaoBack = findViewById(R.id.BotaoBack)
         BotaoBack.setOnClickListener {
-             executarOutraActivity(DefContaActivity::class.java)
+            executarOutraActivity(DefContaActivity::class.java)
         }
 
         getdata()
@@ -42,20 +43,27 @@ class MudarEmailActivity : AppCompatActivity() {
         startActivity(x)
     }
 
-    private fun editarEmail(){
+    private fun editarEmail() {
 
         val user = FirebaseAuth.getInstance().currentUser
 
         var novoEmail = textNovoEmail.text.toString()
 
-        if (!novoEmail.isEmpty()) {
-            user!!.updateEmail(novoEmail).addOnCompleteListener { task2 ->
-                if (task2.isSuccessful) {
-                    Toast.makeText(this, "SUCESSO! Email atualizado!", Toast.LENGTH_LONG).show()
-                    executarOutraActivity(DefContaActivity::class.java)
-                    finish()
-                } else {
-                    Toast.makeText(this, "ERRO: Email não atualizado", Toast.LENGTH_LONG).show()
+        if (user != null) {
+            if (!novoEmail.isEmpty()) {
+                user?.updateEmail(novoEmail).addOnCompleteListener { task2 ->
+                    if (task2.isSuccessful) {
+                        val utilizador = HashMap<String, Any>()
+                        utilizador["email"] = novoEmail
+
+                        FirebaseFirestore.getInstance().collection("Users").document(user.uid).update(utilizador)
+
+                        Toast.makeText(this, "SUCESSO! Email atualizado!", Toast.LENGTH_LONG).show()
+                        executarOutraActivity(DefContaActivity::class.java)
+                        finish()
+                    } else {
+                        Toast.makeText(this, "ERRO: Email não atualizado", Toast.LENGTH_LONG).show()
+                    }
                 }
             }
         }
@@ -66,7 +74,7 @@ class MudarEmailActivity : AppCompatActivity() {
         val Auth = FirebaseFirestore.getInstance().collection("Users")
             .get()
             .addOnCompleteListener { task ->
-                if(task.isSuccessful){
+                if (task.isSuccessful) {
                     viewEmailAtual.text = user!!.email
                 }
             }

@@ -30,6 +30,7 @@
         <activity android:name=".DivisoesActivity" />
         <activity android:name=".MainActivity">
         </activity>
+
     </application>
 
 </manifest>

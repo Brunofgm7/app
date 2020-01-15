@@ -23,6 +23,7 @@ import com.google.android.gms.tasks.OnFailureListener
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.firestore.*
 import kotlinx.android.synthetic.main.activity_def_conta.*
+import org.jetbrains.anko.email
 
 
 class DefContaActivity : AppCompatActivity() {
@@ -41,6 +42,7 @@ class DefContaActivity : AppCompatActivity() {
         BotaoEditarEmail = findViewById(R.id.BotaoEditarEmail)
         BotaoEditarEmail.setOnClickListener {
             executarOutraActivity(MudarEmailActivity::class.java)
+            finish()
         }
         BotaoMudarPass = findViewById(R.id.BotaoMudarPass)
         BotaoMudarPass.setOnClickListener {

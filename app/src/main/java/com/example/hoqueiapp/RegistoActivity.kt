@@ -3,6 +3,7 @@ package com.example.hoqueiapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -51,6 +52,8 @@ class RegistoActivity : AppCompatActivity() {
             mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
 
+                    Log.d("Registo","user auth com uid : ${task.result?.user?.uid}" )
+
                     Toast.makeText(this, "Registo COM sucesso", Toast.LENGTH_SHORT).show()
 
                     createUser(nome, email)
@@ -68,8 +71,8 @@ class RegistoActivity : AppCompatActivity() {
 
     private fun InsertUser(user: User) {
         val userRef = Auth
-
-        userRef.document().set(user).addOnCompleteListener {
+        val uid = mAuth.uid.toString()
+        userRef.document(uid).set(user).addOnCompleteListener {
             when {
                 it.isSuccessful -> {
                     Toast.makeText(this, "Registo COM sucesso", Toast.LENGTH_SHORT).show()
