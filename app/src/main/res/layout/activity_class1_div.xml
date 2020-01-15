@@ -9,8 +9,8 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="298dp"
-        android:layout_height="309dp"
+        android:layout_width="370dp"
+        android:layout_height="286dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.54"
@@ -19,12 +19,13 @@
         app:layout_constraintVertical_bias="0.44">
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
 
             <TextView
                 android:id="@+id/TextPos"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:text="Posição" />
 
@@ -35,46 +36,48 @@
                 android:text="Nome" />
 
             <TextView
+                android:id="@+id/TextPon"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="Pontos" />
+
+            <TextView
                 android:id="@+id/TextJogos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
                 android:text="Jogos" />
 
             <TextView
                 android:id="@+id/TextVit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
                 android:text="V" />
 
             <TextView
                 android:id="@+id/TextEmp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
                 android:text="E" />
 
             <TextView
                 android:id="@+id/TextDer"
-                android:layout_width="wrap_content"
+                android:layout_width="15dp"
                 android:layout_height="wrap_content"
                 android:text="D" />
 
             <TextView
                 android:id="@+id/TextGolosM"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
                 android:text="GM" />
 
             <TextView
                 android:id="@+id/TextGolosS"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
                 android:text="GS" />
 
-            <TextView
-                android:id="@+id/TextPon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pontos" />
+
         </TableRow>
 
         <TableRow
@@ -91,13 +94,13 @@
                 android:id="@+id/textNome1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="SL Benfica" />
 
             <TextView
                 android:id="@+id/textJogos1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:text="0"/>
 
             <TextView
                 android:id="@+id/textV1"
@@ -151,7 +154,7 @@
                 android:id="@+id/textNome2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="OC Barcelos" />
 
             <TextView
                 android:id="@+id/textJogos2"
@@ -212,7 +215,7 @@
                 android:id="@+id/textNome3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Sporting CP" />
 
             <TextView
                 android:id="@+id/textJogos3"
@@ -273,7 +276,7 @@
                 android:id="@+id/textNome4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="UD Oliveirense" />
 
             <TextView
                 android:id="@+id/textJogos4"
@@ -334,7 +337,7 @@
                 android:id="@+id/textNome5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="FC Porto" />
 
             <TextView
                 android:id="@+id/textJogos5"
@@ -394,7 +397,7 @@
                 android:id="@+id/textNome6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="HC Braga" />
 
             <TextView
                 android:id="@+id/textJogos6"
@@ -455,7 +458,7 @@
                 android:id="@+id/textNome7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="HC Turquel" />
 
             <TextView
                 android:id="@+id/textJogos7"
@@ -516,7 +519,7 @@
                 android:id="@+id/textNome8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Riba d'Ave HC" />
 
             <TextView
                 android:id="@+id/textJogos8"
@@ -577,7 +580,7 @@
                 android:id="@+id/textNome9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="AD Valongo" />
 
             <TextView
                 android:id="@+id/textJogos9"
@@ -638,7 +641,7 @@
                 android:id="@+id/textNome10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="AD Sanjoanense" />
 
             <TextView
                 android:id="@+id/textJogos10"
@@ -699,7 +702,7 @@
                 android:id="@+id/textNome11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="A Juventude Viana" />
 
             <TextView
                 android:id="@+id/textJogos11"
@@ -760,7 +763,7 @@
                 android:id="@+id/textNome12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="CD Paço de Arcos" />
 
             <TextView
                 android:id="@+id/textJogos12"
@@ -821,7 +824,7 @@
                 android:id="@+id/textNome13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text='HC "Os Tigres"' />
 
             <TextView
                 android:id="@+id/textJogos13"
@@ -882,7 +885,7 @@
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="AE Física D" />
 
             <TextView
                 android:id="@+id/textJogos14"
@@ -922,67 +925,6 @@
 
             <TextView
                 android:id="@+id/textPontos14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/textPos15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="15" />
-
-            <TextView
-                android:id="@+id/textNome15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/textJogos15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textV15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textGM15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textGS15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textPontos15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0" />
