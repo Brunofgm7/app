@@ -12,6 +12,7 @@ class Class1DivActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_class1_div)
+        supportActionBar?.hide()
         BotaoBack = findViewById(R.id.BotaoBack)
         BotaoBack.setOnClickListener {
             finish()

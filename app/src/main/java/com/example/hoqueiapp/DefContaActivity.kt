@@ -37,7 +37,7 @@ class DefContaActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_def_conta)
-
+        supportActionBar?.hide()
 
         BotaoEditarEmail = findViewById(R.id.BotaoEditarEmail)
         BotaoEditarEmail.setOnClickListener {

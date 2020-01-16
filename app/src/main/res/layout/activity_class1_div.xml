@@ -4,930 +4,869 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Class1DivActivity"
-    android:background="@drawable/imagem15">
+    android:background="@drawable/imagem15"
+    tools:context=".Class1DivActivity">
+
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="370dp"
-        android:layout_height="286dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/BotaoBack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44">
+        app:layout_constraintTop_toBottomOf="@+id/textView1Div">
 
         <TableRow
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            >
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/TextPos"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
-                android:text="Posição" />
+                android:background="#B7070606"
+                android:textColor="#F7F7F7"
+                android:gravity="center"
+                android:text="Posição"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/TextNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nome" />
-
-            <TextView
-                android:id="@+id/TextPon"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:text="Pontos" />
+                android:background="#B7070606"
+                android:textColor="#F7F7F7"
+                android:text="Nome"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/TextJogos"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
-                android:text="Jogos" />
-
-            <TextView
-                android:id="@+id/TextVit"
-                android:layout_width="15dp"
-                android:layout_height="match_parent"
-                android:text="V" />
-
-            <TextView
-                android:id="@+id/TextEmp"
-                android:layout_width="15dp"
-                android:layout_height="match_parent"
-                android:text="E" />
-
-            <TextView
-                android:id="@+id/TextDer"
-                android:layout_width="15dp"
-                android:layout_height="wrap_content"
-                android:text="D" />
+                android:background="#B7070606"
+                android:textColor="#F7F7F7"
+                android:text="Jogos"
+                android:gravity="center"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/TextGolosM"
                 android:layout_width="25dp"
                 android:layout_height="match_parent"
-                android:text="GM" />
+                android:text="GM"
+                android:background="#B7070606"
+                android:textColor="#F7F7F7"
+                android:gravity="center"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/TextGolosS"
                 android:layout_width="25dp"
                 android:layout_height="match_parent"
-                android:text="GS" />
+                android:text="GS"
+                android:background="#B7070606"
+                android:textColor="#F7F7F7"
+                android:gravity="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TextPon"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:text="Pontos"
+                android:background="#B7070606"
+                android:textColor="#F7F7F7"
+                android:gravity="center"
+                android:textStyle="bold" />
 
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/TextPos1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#6B0AF02B"
+                android:gravity="center"
                 android:text="1" />
 
             <TextView
                 android:id="@+id/textNome1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#6B0AF02B"
                 android:text="SL Benfica" />
 
             <TextView
                 android:id="@+id/textJogos1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"/>
-
-            <TextView
-                android:id="@+id/textV1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#6B0AF02B"
+                android:gravity="center"
+                android:text="12" />
 
             <TextView
                 android:id="@+id/textGM1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#6B0AF02B"
+                android:gravity="center"
+                android:text="62" />
 
             <TextView
                 android:id="@+id/textGS1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#6B0AF02B"
+                android:gravity="center"
+                android:text="26" />
 
             <TextView
                 android:id="@+id/textPontos1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#6B0AF02B"
+                android:gravity="center"
+                android:text="31"
+                android:textStyle="bold" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/TextPos2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#80FFFFFF"
+                android:gravity="center"
                 android:text="2" />
 
             <TextView
                 android:id="@+id/textNome2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#80FFFFFF"
                 android:text="OC Barcelos" />
 
             <TextView
                 android:id="@+id/textJogos2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textV2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="12" />
 
             <TextView
                 android:id="@+id/textGM2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="67" />
 
             <TextView
                 android:id="@+id/textGS2"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="46" />
 
             <TextView
                 android:id="@+id/textPontos2"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="29"
+                android:textStyle="bold" />
 
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/TextPos3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="#80FFFFFF"
                 android:text="3" />
 
             <TextView
                 android:id="@+id/textNome3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#80FFFFFF"
                 android:text="Sporting CP" />
 
             <TextView
                 android:id="@+id/textJogos3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textV3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="12" />
 
             <TextView
                 android:id="@+id/textGM3"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="47" />
 
             <TextView
                 android:id="@+id/textGS3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="25" />
 
             <TextView
                 android:id="@+id/textPontos3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="28"
+                android:textStyle="bold" />
 
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/textPos4"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="4" />
 
             <TextView
                 android:id="@+id/textNome4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#80FFFFFF"
                 android:text="UD Oliveirense" />
 
             <TextView
                 android:id="@+id/textJogos4"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textV4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="12" />
 
             <TextView
                 android:id="@+id/textGM4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="56" />
 
             <TextView
                 android:id="@+id/textGS4"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="37" />
 
             <TextView
                 android:id="@+id/textPontos4"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="28"
+                android:textStyle="bold" />
 
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/textPos5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#80FFFFFF"
+                android:gravity="center"
                 android:text="5" />
 
             <TextView
                 android:id="@+id/textNome5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#80FFFFFF"
                 android:text="FC Porto" />
 
             <TextView
                 android:id="@+id/textJogos5"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textV5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="12" />
 
             <TextView
                 android:id="@+id/textGM5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="76" />
 
             <TextView
                 android:id="@+id/textGS5"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="33" />
 
             <TextView
                 android:id="@+id/textPontos5"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="28"
+                android:textStyle="bold" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/textPos6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#80FFFFFF"
+                android:gravity="center"
                 android:text="6" />
 
             <TextView
                 android:id="@+id/textNome6"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
                 android:text="HC Braga" />
 
             <TextView
                 android:id="@+id/textJogos6"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textV6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="12" />
 
             <TextView
                 android:id="@+id/textGM6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="39" />
 
             <TextView
                 android:id="@+id/textGS6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="41" />
 
             <TextView
                 android:id="@+id/textPontos6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="16"
+                android:textStyle="bold" />
 
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/textPos7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#80FFFFFF"
+                android:gravity="center"
                 android:text="7" />
 
             <TextView
                 android:id="@+id/textNome7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#80FFFFFF"
                 android:text="HC Turquel" />
 
             <TextView
                 android:id="@+id/textJogos7"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textV7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="12" />
 
             <TextView
                 android:id="@+id/textGM7"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="33" />
 
             <TextView
                 android:id="@+id/textGS7"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="44" />
 
             <TextView
                 android:id="@+id/textPontos7"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="14"
+                android:textStyle="bold" />
 
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/textPos8"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="8" />
 
             <TextView
                 android:id="@+id/textNome8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#80FFFFFF"
                 android:text="Riba d'Ave HC" />
 
             <TextView
                 android:id="@+id/textJogos8"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textV8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="12" />
 
             <TextView
                 android:id="@+id/textGM8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="44" />
 
             <TextView
                 android:id="@+id/textGS8"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="57" />
 
             <TextView
                 android:id="@+id/textPontos8"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="14"
+                android:textStyle="bold" />
 
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/textPos9"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="9" />
 
             <TextView
                 android:id="@+id/textNome9"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
                 android:text="AD Valongo" />
 
             <TextView
                 android:id="@+id/textJogos9"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textV9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="12" />
 
             <TextView
                 android:id="@+id/textGM9"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="40" />
 
             <TextView
                 android:id="@+id/textGS9"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="52" />
 
             <TextView
                 android:id="@+id/textPontos9"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="13"
+                android:textStyle="bold" />
 
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/textPos10"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="10" />
 
             <TextView
                 android:id="@+id/textNome10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#80FFFFFF"
                 android:text="AD Sanjoanense" />
 
             <TextView
                 android:id="@+id/textJogos10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textV10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="12" />
 
             <TextView
                 android:id="@+id/textGM10"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="43" />
 
             <TextView
                 android:id="@+id/textGS10"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="53" />
 
             <TextView
                 android:id="@+id/textPontos10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="13"
+                android:textStyle="bold" />
 
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/textPos11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#80FFFFFF"
+                android:gravity="center"
                 android:text="11" />
 
             <TextView
                 android:id="@+id/textNome11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#80FFFFFF"
                 android:text="A Juventude Viana" />
 
             <TextView
                 android:id="@+id/textJogos11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textV11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="12" />
 
             <TextView
                 android:id="@+id/textGM11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="40" />
 
             <TextView
                 android:id="@+id/textGS11"
                 android:layout_width="wrap_content"
+                android:background="#80FFFFFF"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:gravity="center"
+                android:text="43" />
 
             <TextView
                 android:id="@+id/textPontos11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#80FFFFFF"
+                android:gravity="center"
+                android:text="9"
+                android:textStyle="bold" />
 
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/textPos12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="#83F30404"
                 android:text="12" />
 
             <TextView
                 android:id="@+id/textNome12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#83F30404"
                 android:text="CD Paço de Arcos" />
 
             <TextView
                 android:id="@+id/textJogos12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textV12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#83F30404"
+                android:gravity="center"
+                android:text="12" />
 
             <TextView
                 android:id="@+id/textGM12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#83F30404"
+                android:gravity="center"
+                android:text="32" />
 
             <TextView
                 android:id="@+id/textGS12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#83F30404"
+                android:gravity="center"
+                android:text="53" />
 
             <TextView
                 android:id="@+id/textPontos12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#83F30404"
+                android:gravity="center"
+                android:text="9"
+                android:textStyle="bold" />
 
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/textPos13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#83F30404"
+                android:gravity="center"
                 android:text="13" />
 
             <TextView
                 android:id="@+id/textNome13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#83F30404"
                 android:text='HC "Os Tigres"' />
 
             <TextView
                 android:id="@+id/textJogos13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textV13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#83F30404"
+                android:gravity="center"
+                android:text="12" />
 
             <TextView
                 android:id="@+id/textGM13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#83F30404"
+                android:gravity="center"
+                android:text="30" />
 
             <TextView
                 android:id="@+id/textGS13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#83F30404"
+                android:gravity="center"
+                android:text="65" />
 
             <TextView
                 android:id="@+id/textPontos13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#83F30404"
+                android:gravity="center"
+                android:text="9"
+                android:textStyle="bold" />
 
 
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/textPos14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#83F30404"
+                android:gravity="center"
                 android:text="14" />
 
             <TextView
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="#83F30404"
                 android:text="AE Física D" />
 
             <TextView
                 android:id="@+id/textJogos14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textV14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textE14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <TextView
-                android:id="@+id/textD14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#83F30404"
+                android:gravity="center"
+                android:text="12" />
 
             <TextView
                 android:id="@+id/textGM14"
+                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#83F30404"
+                android:text="26" />
 
             <TextView
                 android:id="@+id/textGS14"
+                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#83F30404"
+                android:text="60" />
 
             <TextView
                 android:id="@+id/textPontos14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                android:background="#83F30404"
+                android:gravity="center"
+                android:text="1"
+                android:textStyle="bold" />
 
 
         </TableRow>

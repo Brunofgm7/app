@@ -19,6 +19,7 @@ class DivisoesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_divisoes)
+        supportActionBar?.hide()
         Botao1Div = findViewById(R.id.Botao1Div)
         Botao1Div.setOnClickListener {
             executarOutraActivity(ChatActivity::class.java)

@@ -41,8 +41,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintEnd_toStartOf="@+id/textNovaPass"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.396" />
@@ -55,29 +54,28 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintEnd_toStartOf="@+id/textRepetirNovaPass"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.52" />
 
     <EditText
         android:id="@+id/textNovaPass"
-        android:layout_width="218dp"
-        android:layout_height="47dp"
+        android:layout_width="216dp"
+        android:layout_height="46dp"
         android:ems="10"
         android:hint="Inserir nova pass"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.678"
+        app:layout_constraintHorizontal_bias="0.682"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.381" />
+        app:layout_constraintVertical_bias="0.382" />
 
     <EditText
         android:id="@+id/textRepetirNovaPass"
-        android:layout_width="218dp"
+        android:layout_width="216dp"
         android:layout_height="47dp"
         android:ems="10"
         android:hint="Repetir nova pass"

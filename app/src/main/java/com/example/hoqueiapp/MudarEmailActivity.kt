@@ -22,6 +22,7 @@ class MudarEmailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mudar_email)
+        supportActionBar?.hide()
 
         viewEmailAtual = findViewById(R.id.viewEmailAtual)
         textNovoEmail = findViewById(R.id.textNovoEmail)

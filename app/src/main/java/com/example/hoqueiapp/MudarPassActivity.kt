@@ -19,6 +19,7 @@ class MudarPassActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mudar_pass)
+        supportActionBar?.hide()
 
         BotaoGuardar = findViewById(R.id.BotaoGuardar)
         BotaoGuardar.setOnClickListener {

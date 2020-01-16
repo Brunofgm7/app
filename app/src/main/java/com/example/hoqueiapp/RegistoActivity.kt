@@ -22,6 +22,7 @@ class RegistoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registo)
+        supportActionBar?.hide()
 
         BotaoRegisto = findViewById(R.id.BotaoRegisto)
         BotaoRegisto.setOnClickListener {
@@ -52,13 +53,27 @@ class RegistoActivity : AppCompatActivity() {
             mAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
 
-                    Log.d("Registo","user auth com uid : ${task.result?.user?.uid}" )
+                    val user = HashMap<String, Any>()
+                    user["nome"] = nome
+                    user["email"] = email
+                    val userRef = Auth
+                    val uid = mAuth?.uid.toString()
+                    userRef.document(uid).set(user).addOnCompleteListener {
+                        when {
+                            it.isSuccessful -> {
+                                Toast.makeText(this, "Registo COM sucesso", Toast.LENGTH_SHORT).show()
+                                mAuth.signOut()
+                            }
+                            else -> {
+                                Toast.makeText(this, "Registo sem sucesso", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
 
                     Toast.makeText(this, "Registo COM sucesso", Toast.LENGTH_SHORT).show()
 
-                    createUser(nome, email)
-
                     executarOutraActivity(LoginActivity::class.java)
+                    finish()
 
                 } else {
                     Toast.makeText(this, "Registo sem sucesso", Toast.LENGTH_SHORT).show()
@@ -67,27 +82,5 @@ class RegistoActivity : AppCompatActivity() {
         } else {
             Toast.makeText(this, "Por favor preencha os campos!", Toast.LENGTH_SHORT).show()
         }
-    }
-
-    private fun InsertUser(user: User) {
-        val userRef = Auth
-        val uid = mAuth.uid.toString()
-        userRef.document(uid).set(user).addOnCompleteListener {
-            when {
-                it.isSuccessful -> {
-                    Toast.makeText(this, "Registo COM sucesso", Toast.LENGTH_SHORT).show()
-                }
-                else -> {
-                    Toast.makeText(this, "Registo sem sucesso", Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
-    }
-
-    private fun createUser(nome: String, email: String) {
-        val user = User()
-        user.nome = nome
-        user.email = email
-        InsertUser(user)
     }
 }

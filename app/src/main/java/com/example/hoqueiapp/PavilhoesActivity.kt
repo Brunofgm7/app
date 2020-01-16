@@ -43,6 +43,7 @@ class PavilhoesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pavilhoes)
+        supportActionBar?.hide()
         BotaoBack = findViewById(R.id.BotaoBack)
         BotaoBack.setOnClickListener {
             finish()
