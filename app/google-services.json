@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "33661591874-d2itvgs12rcted9s6d1e0rrg1tbi5bj9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hoqueiapp",
+            "certificate_hash": "c0e8a766bbcf5c08b671bc5eaff3ec76ab046047"
+          }
+        },
+        {
           "client_id": "33661591874-qmpii5vk9ei3bn3sim8t9cb9uhnst7vr.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
